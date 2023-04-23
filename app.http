@@ -1,0 +1,39 @@
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+GET http://localhost:3000/todos/?category=Buy
+
+###
+// API 2 
+GET http://localhost:3000/agenda/?date=2021-04-04
+
+###
+// API 3
+GET http://localhost:3000/agenda/?date=2021-04-04
+
+###
+//API 4 
+POST http://localhost:3000/todos/ 
+Content-Type: application/json
+
+{
+  "id": 9,
+  "todo": "Finalize event theme",
+  "priority": "HIGH",
+  "status": "DONE",
+  "category": "HOME",
+  "dueDate": "2021-02-15"
+}
+
+###
+// API 5
+# Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/3/
+Content-Type: application/json
+
+{
+    "category": "Ram"
+}
+
+###
+DELETE http://localhost:3000/todos/9/ 
